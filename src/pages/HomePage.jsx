@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import User from "./components/User";
+import User from "../components/User";
 
 export default function HomePage() {
     const [users, setUsers] = useState([]);
@@ -16,8 +16,6 @@ export default function HomePage() {
 
     return (
       <div className="page">
-        <h1>Home page</h1>
-        <p>This is the home page.</p>
         <section className="grid">
           {users.map(user => (
             <User key={user.id} user={user} />
